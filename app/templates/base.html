@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <form action="http://localhost:5000/getimg" method="post" enctype="multipart/form-data">
+    {%with messages = get_flashed_messages()%}
+      {%if messages%}
+        {%for message in messages%}
+          <p>{{message}}</p>
+        {%endfor%}
+      {%endif%}
+    {%endwith%}
+    <p>Input Image:</p>
+    <p><input type="file" name = "file"></p>
+    <p><input type = "submit" value = "send"></p>
+  </form>
+  {%if %}
+  {%endif%}
+  </body>
+</html>
